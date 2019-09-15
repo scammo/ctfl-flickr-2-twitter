@@ -1,0 +1,23 @@
+{
+  "name": "ctfl-flickr-2-twitter",
+  "version": "1.0.0",
+  "description": "Chaostreff Flensburg Flickr images to twitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scammo/ctfl-flickr-2-twitter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scammo/ctfl-flickr-2-twitter/issues"
+  },
+  "homepage": "https://github.com/scammo/ctfl-flickr-2-twitter#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0"
+  }
+}
