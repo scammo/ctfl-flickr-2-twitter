@@ -1,7 +1,7 @@
 {
   "name": "ctfl-flickr-2-twitter",
   "version": "1.0.0",
-  "description": "Chaostreff Flensburg Flickr images to twitter",
+  "description": "Chaostreff Flensburg Flickr images to mastadon & twitter",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/scammo/ctfl-flickr-2-twitter#readme",
   "dependencies": {
-    "dotenv": "^8.1.0"
+    "dotenv": "^8.1.0",
+    "flickr-photo-url": "^2.1.0",
+    "flickr-sdk": "^3.9.0",
+    "image-downloader": "^3.5.0",
+    "mastodon": "^1.2.2"
   }
 }
