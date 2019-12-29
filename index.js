@@ -5,6 +5,7 @@ const download = require('image-downloader')
 var fs = require('fs');
 const url = require('flickr-photo-url')
 const Flickr = require('flickr-sdk');
+const randomInt = require('random-int');
 
 var flickr = new Flickr(process.env.FLICKR_API_KEY);
 const flickrUserId = "157585171@N05";
@@ -76,12 +77,13 @@ function getLicenseText(license){
 
 async function main(){
   const flickrPhotos = await getFlickrPhotos();
-  const randomPhoto = flickrPhotos.photos.photo[Math.floor(Math.random()*flickrPhotos.photos.photo.length)]
+  console.log('flickrPhotos.photos.photo.length',flickrPhotos.photos.photo.length)
+  const randomPhoto = flickrPhotos.photos.photo[randomInt(flickrPhotos.photos.photo.length)]
   const randomPhotoUrl = await url(flickrUserId, +randomPhoto.id, url.sizes.large)
   const filePath = await downloadPhoto(randomPhotoUrl)
   const photoInfo = await getPhotoInfo(+randomPhoto.id)
   const licenseText = getLicenseText(photoInfo.photo.license)
-  const flickrUrl = `https://www.flickr.com/photos/157585171@N05/${randomPhoto.id}`
+  const flickrUrl = `https://www.flickr.com/photos/ctfl/${randomPhoto.id}`
   const text = `This is what chaos looks like - 📸  ${licenseText} ${flickrUrl}`
 
   var id;
